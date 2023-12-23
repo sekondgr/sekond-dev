@@ -61,7 +61,7 @@ const defaultConfig = {
   // If you want to change the language, remember to also change the
   // locale data and the messages in the app.js file.
   localization: {
-    locale: 'en-US',
+    locale: 'el',
     // First day of week
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getWeekInfo#return_value
     // 1: Monday
