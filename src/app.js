@@ -71,8 +71,8 @@ import defaultMessages from './translations/en.json';
 //   3. en.json
 //
 // I.e. remove "const messagesInLocale" and add import for the correct locale:
-// import messagesInLocale from './translations/fr.json';
-const messagesInLocale = {};
+import messagesInLocale from './translations/el.json';
+//const messagesInLocale = {};
 
 // If translation key is missing from `messagesInLocale` (e.g. fr.json),
 // corresponding key will be added to messages from `defaultMessages` (en.json)
@@ -131,6 +131,8 @@ const MomentLocaleLoader = props => {
       ? loadable.lib(() => import(/* webpackChunkName: "fi" */ 'moment/locale/fi'))
       : ['nl', 'nl-NL'].includes(locale)
       ? loadable.lib(() => import(/* webpackChunkName: "nl" */ 'moment/locale/nl'))
+      : ['el', 'el-GR'].includes(locale)
+      ? loadable.lib(() => import(/* webpackChunkName: "el" */ 'moment/locale/el'))
       : loadable.lib(() => import(/* webpackChunkName: "locales" */ 'moment/min/locales.min'));
 
   return (
