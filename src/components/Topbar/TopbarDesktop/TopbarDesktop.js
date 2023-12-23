@@ -37,9 +37,13 @@ const TopbarDesktop = props => {
     initialSearchFormValues,
   } = props;
   const [mounted, setMounted] = useState(false);
+  const [subdomain, setSubdomain] = useState('');
+
 
   useEffect(() => {
     setMounted(true);
+    const currentSubdomain = window.location.hostname.split('.')[0];
+    setSubdomain(currentSubdomain);
   }, []);
 
   const marketplaceName = appConfig.marketplaceName;
@@ -138,7 +142,6 @@ const TopbarDesktop = props => {
     </NamedLink>
   );
 
-  const subdomain = window.location.hostname.split('.')[0];
   const currentLanguage = subdomain === 'el' ? 'el' : 'en';
 
   return (
