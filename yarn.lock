@@ -11716,7 +11716,7 @@ shallowequal@^1.1.0:
   resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
   integrity sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==
 
-sharetribe-flex-sdk@^v1.20.0:
+sharetribe-flex-sdk@^1.20.0:
   version "1.20.0"
   resolved "https://registry.yarnpkg.com/sharetribe-flex-sdk/-/sharetribe-flex-sdk-1.20.0.tgz#ac9ccda2cc1c2a2d2a3ff0ba47e203597261da72"
   integrity sha512-7Qa+G5Sa12soizqJnXQbFIVnmdKfGNePEzJ++gZ4RvlW2XGYp3Vd8KRMwrt46wS4v7OgOPnKdaViNcLSQm+DOQ==
