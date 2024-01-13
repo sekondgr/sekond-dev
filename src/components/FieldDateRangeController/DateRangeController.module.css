@@ -97,7 +97,7 @@
     padding-bottom: 40px;
 
     &::first-letter {
-      text-transform: capitalize;
+      text-transform: lowercase;
     }
 
     @media (--viewportMedium) {

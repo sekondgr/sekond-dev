@@ -269,7 +269,7 @@
     display: none;
   }
   & :global(.CalendarMonth_caption) {
-    text-transform: capitalize;
+    text-transform: lowercase;
   }
 
   & :global(.DateInput_input__disabled) {
