@@ -68,7 +68,7 @@
 }
 
 .group {
-  text-transform: capitalize;
+  text-transform: lowercase;
 }
 
 .selectedGroup {
