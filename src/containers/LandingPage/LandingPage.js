@@ -11,6 +11,9 @@ import { propTypes } from '../../util/types';
 import FallbackPage from './FallbackPage';
 import { ASSET_NAME } from './LandingPage.duck';
 
+import LatestListings from '../../components/Listings/LatestListings';
+
+
 const PageBuilder = loadable(() =>
   import(/* webpackChunkName: "PageBuilder" */ '../PageBuilder/PageBuilder')
 );
@@ -18,16 +21,35 @@ const PageBuilder = loadable(() =>
 export const LandingPageComponent = props => {
   const { pageAssetsData, inProgress, error } = props;
 
+  const pageData = pageAssetsData?.[camelize(ASSET_NAME)]?.data;
+
+  // Create a custom section for LatestListings
+  const latestListingsSection = {
+    sectionId: 'latest-listings',
+    sectionType: 'customListings',
+  };
+
+  // Include the custom section in the page data
+  const customSections = 
+    pageData ? [...pageData.sections, latestListingsSection] : [];
+
   return (
     <PageBuilder
-      pageAssetsData={pageAssetsData?.[camelize(ASSET_NAME)]?.data}
+      pageAssetsData={{
+        ...pageData,
+        sections: customSections,
+      }}
+      options={{
+        sectionComponents: {
+          customListings: { component: LatestListings },
+        },
+      }}
       inProgress={inProgress}
       error={error}
       fallbackPage={<FallbackPage error={error} />}
     />
   );
 };
-
 LandingPageComponent.propTypes = {
   pageAssetsData: object,
   inProgress: bool,

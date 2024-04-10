@@ -1,0 +1,17 @@
+/* LatestListings.module.css */
+
+.latestListingsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust the minmax values as per your design */
+    gap: 16px; /* Space between cards */
+    padding: 16px; /* Adjust padding as needed */
+    margin: 0 auto; /* Centers the grid in the page */
+
+    /* Optional: Set a max-width if you want to limit the width of the grid */
+    max-width: 1200px; /* Adjust or remove as needed */
+}
+
+.latestListingsHeader {
+    text-align: center; /* Center the header text */
+    margin-bottom: 16px;
+}
